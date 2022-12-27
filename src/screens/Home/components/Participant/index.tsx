@@ -1,11 +1,21 @@
-import {Text, View } from 'react-native';
+import {Text, View, TouchableOpacity } from 'react-native';
+
+import { styles } from './styles';
 
 export function Participant(){
     return(
-        <View>
-            <Text>
+        <View style={styles.container}>
+            <Text style={styles.name}>
                 Leandro Sávio
             </Text>
+
+            <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>
+            -
+        </Text>
+
+     </TouchableOpacity>
+
         </View>
     )
 }
