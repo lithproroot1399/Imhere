@@ -34,3 +34,5 @@ export function Home() {
     </View>
   ); 
 }
+
+//Fazendo mudanças
