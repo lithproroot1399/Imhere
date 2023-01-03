@@ -36,6 +36,8 @@ export function Home() {
       <Participant />
       <Participant />
       <Participant />
+      <Participant />
+      
     </View>
   ); 
 }
