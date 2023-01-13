@@ -4,9 +4,13 @@ import { styles } from './styles';
 
 export function Home() {
   function handleParticipantAdd() {
-    console.log("Você clicou no botão de Adicionar!")
+    console.log("Você clicou no botão de Adicionar!");
   }
   
+
+  function handleParticipantRemove(name: String) {
+    console.log(`Você clicou em remover o participante ${name}`);
+  }
     return (
     <View style={styles.container}>
     <Text style={styles.eventName}>
@@ -33,9 +37,7 @@ export function Home() {
      </TouchableOpacity>
      </View>
     
-      <Participant name="Leandro"/>
-      <Participant name="Caio"/>
-      <Participant name="Alberto"/>
+      <Participant name="Leandro" onRemove={() => handleParticipantRemove("Leandro")}/>
       
     </View>
   ); 
