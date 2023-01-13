@@ -1,4 +1,4 @@
-import {Text, TextInput, View, TouchableOpacity, FlatList } from 'react-native';
+import {Text, TextInput, View, TouchableOpacity, FlatList, Alert } from 'react-native';
 import { Participant } from './components/Participant';
 import { styles } from './styles';
 
@@ -6,6 +6,9 @@ export function Home() {
   const participants = ['Leandro', 'Caio', 'Alberto', 'Estefanio', 'Roberto', 'Mauro', 'Arlindo', 'Lalaio'];
 
   function handleParticipantAdd() {
+    if(participants.includes("Leandro")){
+      Alert.alert("Participante existe", "Já existe um participante na lista com esse nome")
+    }
     console.log("Você clicou no botão de Adicionar!");
   }
   
